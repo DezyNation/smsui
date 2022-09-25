@@ -1,0 +1,77 @@
+.payrollRow{
+    position: relative;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+
+    .large{
+        position: relative;
+        padding: 1rem;
+        flex: 5;
+        background: #FFF;
+        border-radius: 16px;
+        box-shadow: 2px 2px 20px rgba($color: #000000, $alpha: 0.1);
+    }
+    .small{
+        position: relative;
+        padding: 1rem;
+        flex: 3;
+        background: #FFF;
+        border-radius: 16px;
+        box-shadow: 2px 2px 20px rgba($color: #000000, $alpha: 0.1);
+    }
+    .title{
+        position: relative;
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+        color: #333;
+    }
+    .transaction-data{
+        position: relative;
+        margin: .5rem auto 0;
+        padding: .5rem 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-bottom: 1px solid rgb(220, 220, 220);
+        gap: .5rem;
+
+        .transaction-type{
+            margin-right: 2rem;
+            width: 32px;
+            height: 32px;
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(120deg, #222, #333);
+            color: #FFF;
+            border-radius: 50%;
+        }
+
+        .transaction-type.money-received{
+            background: linear-gradient(120deg, #008332, #019239);
+        }
+        .transaction-type.money-spent{
+            background: linear-gradient(120deg, #ad2412, #be1b06);
+        }
+
+        .transaction-info{
+            flex: 7;
+            font-size: 1rem;
+            font-weight: 500;
+            color: darkslategray;
+        }
+        .transaction-amount{
+            width: 8rem;
+            text-align: center;
+        }
+        .transaction-date{
+            flex: 4;
+            font-size: .95rem;
+        }
+    }
+}

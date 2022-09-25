@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+}
+    
+.grad-black{
+    background: linear-gradient(120deg, #222, #333);
+}
+.grad-blue{
+    background: linear-gradient(120deg, #1b81cf, #3273f5);
+}
+.grad-red{
+    background: #EB1D36;
+}
+.grad-green{
+    background: linear-gradient(120deg, #008332, #019239);
+}
+
+.generalButton{
+    position: relative;
+    width: 16%;
+    margin: 1rem 0;
+    padding: .5rem .5rem;
+    background: #1b81cf;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    font-size: .95rem;
+    font-weight: 400;
+    color: #FFF;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .3s ease;
+
+    i{
+        margin-right: .5rem;
+        font-size: 1.5rem;
+    }
+
+    &:hover{
+        background: rgb(80, 80, 230);
+    }
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+}
+.mainContainer{
+    height: 100vh;
+    overflow-y: scroll;
+    flex: 4;
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}

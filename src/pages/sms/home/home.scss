@@ -1,0 +1,31 @@
+
+.widgetWrapper{
+    position: relative;
+    margin: 2rem auto 1rem;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+}
+
+.chartsWrapper{
+    position: relative;
+    flex: 1;
+    margin: 1rem auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.tableWrapper{
+    position: relative;
+    width: 100%;
+    margin: 1rem auto;
+    padding: 1rem;
+
+    .title{
+        font-size: 1.5rem;
+        color: #333;
+    }
+}

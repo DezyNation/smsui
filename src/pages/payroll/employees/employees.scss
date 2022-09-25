@@ -1,0 +1,128 @@
+.employeesWrapper{
+    position: relative;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    .title{
+        font-size: 1.5rem;
+        margin: 1rem 0;
+        color: #333;
+    }
+
+    form{
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+
+        .formTitle{
+            margin: 1rem 0;
+
+            &.mb-0{
+                margin-bottom: 0;
+            }
+        }
+        .formSubtitle{
+            margin: 2rem 0 0;
+        }
+
+        .row{
+            margin: .5rem auto;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+
+            .column{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+            }
+        }
+
+        .formNavigationRow{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .column{
+            margin: .5rem auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .columnSpan{
+            margin-bottom: 1rem;
+            display: flex;
+            flex-direction: row;
+            width: auto;
+            cursor: pointer;
+
+            input[type='checkbox']{
+                width: auto;
+                margin-right: .75rem;
+                cursor: pointer;
+            }
+            label{
+                width: auto;
+                cursor: pointer;
+            }
+
+            .genderOption{
+                margin: .5rem .5rem;
+                padding: .75rem 1rem;
+                font-size: 1rem;
+                color: #333;
+                border: 1px solid #333;
+                border-radius: 8px;
+                outline: none;
+                background: transparent;
+                cursor: pointer;
+
+                i{
+                    margin-right: 1rem;
+                }
+                
+                &.selected{
+                    background-color: #333;
+                    color: #FFF;
+                }
+            }
+        }
+
+        label{
+            margin: .5rem 0;
+            font-size: .9rem;
+            color: #333;
+        }
+        input, textarea, .datePicker, select{
+            width: 100%;
+            padding: .75rem 1rem;
+            border-radius: 8px;
+            border: 1px solid rgb(220, 220, 220);
+            background: #FFF;
+            outline: none;
+            resize: none;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+        input[type='number']{
+            -moz-appearance: textfield;
+        }
+    }
+}

@@ -1,0 +1,138 @@
+.sidebar{
+    position: relative;
+    flex: 1;
+    height: 100vh;
+    overflow-y: scroll;
+    background: #111827;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
+    
+    .sidepanel-link{
+        position: relative;
+        width: 100%;
+        margin: .125rem auto;
+        padding: .5rem .75rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        color: lightgray;
+        font-size: .95rem;
+        font-weight: 400;
+        border-radius: 8px;
+        transition: all .3s ease;
+
+        i{
+            margin-right: .75rem;
+            font-size: 1.35rem;
+        }
+
+        &:hover{
+            background: #1d273b;
+        }
+    }
+
+    .top{
+        position: relative;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: lightblue;
+        
+        .logo{
+            width: 100%;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            padding: 1rem;
+            background: #1d273b;
+            color: #FFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+
+        .user-details{
+            position: relative;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            color: #FFF;
+
+            i{
+                margin-right: 1rem;
+                font-size: 1.5rem;
+            }
+
+            .user-name{
+                position: relative;
+                font-size: 1rem;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .center{
+        position: relative;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        form{
+            position: relative;
+            margin-bottom: 1rem;
+            padding: .5rem .75rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            background: #1d273b;
+            color: lightgray;
+            border-radius: 8px;
+
+            i{
+                margin-right: .5rem;
+            }
+
+            input{
+                width: auto;
+                font-size: 1rem;
+                background: transparent;
+                border: none;
+                outline: none;
+                color: lightgray;
+                font-weight: 400;
+            }
+        }
+
+        hr{
+            margin: 1rem auto;
+            width: 100%;
+            border: 0;
+            height: .5px;
+            background: #999;
+        }
+    }
+
+    .bottom{
+        position: relative;
+        width: 100%;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+}
