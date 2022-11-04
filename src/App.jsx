@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import {
   Routes,
   Route,
@@ -23,36 +23,40 @@ import Sidebar from "./components/sidebar/Sidebar";
 import NotFound from "./pages/cms/NotFound";
 
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false)
+
   return (
     <div className="App">
-      <div className="main">
-        <Sidebar />
-        <div className="mainContainer">
-          <Navbar />
-          <Routes>
-            <Route index element={<Home />} />
-            <Route path='login' element={<Login />} />
-            <Route path='/sms/management' element={<Management />} />
-            <Route path='/sms/fees' element={<Fees />} />
-            <Route path='/sms/branch' element={<Branch />} />
-            <Route path='/sms/user' element={<Users />} >
-              <Route path='all' element={<Users />} />
-              <Route path=':userId' element={<Users />} />
-            </Route>
-            <Route path="payroll">
-              <Route path="payroll" element={<Payroll />} />
-              <Route path="attendance" element={<Attendance />} />
-              <Route path="employees" element={<Employees />} />
-              <Route path="employees/add-employee" element={<AddEmployee />} />
-              <Route path="payments" element={<Payments />} />
-              <Route path="reports" element={<Reports />} />
-              <Route path="salary" element={<Salary />} />
-              <Route path="settings" element={<Settings />} />
-            </Route>
-            <Route element={<NotFound />}/>
-          </Routes>
-        </div>
-      </div>
+      {isAuthenticated ?
+        <div className="main">
+          <Sidebar />
+          <div className="mainContainer">
+            <Navbar />
+            <Routes>
+              <Route index element={<Home />} />
+              <Route path='login' element={<Login />} />
+              <Route path='/sms/management' element={<Management />} />
+              <Route path='/sms/fees' element={<Fees />} />
+              <Route path='/sms/branch' element={<Branch />} />
+              <Route path='/sms/user' element={<Users />} >
+                <Route path='all' element={<Users />} />
+                <Route path=':userId' element={<Users />} />
+              </Route>
+              <Route path="payroll">
+                <Route path="payroll" element={<Payroll />} />
+                <Route path="attendance" element={<Attendance />} />
+                <Route path="employees" element={<Employees />} />
+                <Route path="employees/add-employee" element={<AddEmployee />} />
+                <Route path="payments" element={<Payments />} />
+                <Route path="reports" element={<Reports />} />
+                <Route path="salary" element={<Salary />} />
+                <Route path="settings" element={<Settings />} />
+              </Route>
+              <Route element={<NotFound />} />
+            </Routes>
+          </div>
+        </div> : <Login/> }
+
     </div>
   );
 }
