@@ -24,7 +24,7 @@ import NotFound from "./pages/cms/NotFound";
 import Auth from "./pages/auth/Auth";
 
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false)
+  const [isAuthenticated, setIsAuthenticated] = useState(true)
 
   return (
     <div className="App">
