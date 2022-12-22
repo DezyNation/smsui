@@ -6,7 +6,7 @@ import {
 import './app.scss';
 import Management from './pages/sms/management/Management';
 import Home from './pages/sms/home/Home'
-import Login from './pages/login/Login'
+import Login from './pages/auth/Login'
 import Fees from "./pages/sms/fees/Fees";
 import Branch from "./pages/sms/branch/Branch";
 import Users from "./pages/sms/users/Users";
@@ -21,6 +21,7 @@ import AddEmployee from "./pages/payroll/employees/AddEmployee";
 import Navbar from "./components/navbar/Navbar";
 import Sidebar from "./components/sidebar/Sidebar";
 import NotFound from "./pages/cms/NotFound";
+import Auth from "./pages/auth/Auth";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
@@ -34,7 +35,6 @@ function App() {
             <Navbar />
             <Routes>
               <Route index element={<Home />} />
-              <Route path='login' element={<Login />} />
               <Route path='/sms/management' element={<Management />} />
               <Route path='/sms/fees' element={<Fees />} />
               <Route path='/sms/branch' element={<Branch />} />
@@ -55,7 +55,7 @@ function App() {
               <Route element={<NotFound />} />
             </Routes>
           </div>
-        </div> : <Login/> }
+        </div> : <Auth/> }
 
     </div>
   );

@@ -64,3 +64,11 @@
         display: none;
     }
 }
+
+.centered{
+    position: relative;
+    width: 100%;
+    display: grid;
+    text-align: center;
+    place-content: center;
+}

@@ -1,6 +1,6 @@
 .container{
     position: relative;
-    padding: 2rem;
+    padding: 2rem 3em;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -45,23 +45,9 @@
             }
         }
 
-        button{
+        .generalButton{
             width: 100%;
-            padding: .85rem;
-            text-align: center;
-            font-size: .9rem;
-            background: blue;
-            color: #FFF;
-            border: none;
-            outline: none;
-            border-radius: 8px;
             text-transform: uppercase;
-            cursor: pointer;
-            transition: all .3s ease;
-
-            &:hover{
-                background: #333;
-            }
         }
     }
 }
